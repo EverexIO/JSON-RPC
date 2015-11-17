@@ -1,9 +1,9 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC
+ * @package AmiLabs/JSONRPC
  */
 
-namespace AmiLabs\JSON-RPC;
+namespace AmiLabs\JSONRPC;
 
 use InvalidArgumentException;
 use RuntimeException;
@@ -14,11 +14,11 @@ use RuntimeException;
  * Factory, returnining RPC layers.
  * Example:
  * <code>
- * use AmiLabs\JSON-RPC\RPC;
+ * use AmiLabs\JSONRPC\RPC;
  *
  * $client = RPC::getLayer(
  *     'JSON',
- *     // or class implementing AmiLabs\JSON-RPC\RPC\ClientInterface interface:
+ *     // or class implementing AmiLabs\JSONRPC\RPC\ClientInterface interface:
  *     // '\\My\\Namespace\\JSON',
  *     RPC::TYPE_CLIENT,
  *     array(
@@ -37,7 +37,7 @@ use RuntimeException;
  * );
  * </code>
  *
- * @package AmiLabs/JSON-RPC
+ * @package AmiLabs/JSONRPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
 class RPC
@@ -51,7 +51,7 @@ class RPC
      * @param  string $layer    RPC layer, for exaple 'JSON'
      * @param  int    $type     self::TYPE_CLIENT | self::TYPE_SERVER
      * @param  array  $options  Options passing to the layer
-     * @return \AmiLabs\JSON-RPC\RPC\Layer
+     * @return \AmiLabs\JSONRPC\RPC\Layer
      * @throws InvalidArgumentException
      * @throws RuntimeException
      */
@@ -70,12 +70,12 @@ class RPC
                 );
         }
         if (FALSE === mb_strpos($layer, '\\', NULL, 'ASCII')) {
-            $class = "AmiLabs\\JSON-RPC\\RPC\\{$type}\\{$layer}";
+            $class = "AmiLabs\\JSONRPC\\RPC\\{$type}\\{$layer}";
         } else {
             $class = $layer;
         }
         $layer = new $class($options);
-        $interface = "AmiLabs\\JSON-RPC\\RPC\\{$type}Layer";
+        $interface = "AmiLabs\\JSONRPC\\RPC\\{$type}Layer";
         if (!($layer instanceof $interface)) {
             throw new RuntimeException(
                 sprintf('Class %s does not implement %s interface', $class, $interface)

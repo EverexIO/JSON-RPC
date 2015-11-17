@@ -1,26 +1,26 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  */
 
-namespace AmiLabs\JSON-RPC\RPC\Client;
+namespace AmiLabs\JSONRPC\RPC\Client;
 
 use BadMethodCallException;
 use InvalidArgumentException;
 use RuntimeException;
-use AmiLabs\JSON-RPC\Core\Logger;
-use AmiLabs\JSON-RPC\Request;
-use AmiLabs\JSON-RPC\RPC\ClientInterface;
-use AmiLabs\JSON-RPC\RPC\ClientLayerNet;
+use AmiLabs\JSONRPC\Core\Logger;
+use AmiLabs\JSONRPC\Request;
+use AmiLabs\JSONRPC\RPC\ClientInterface;
+use AmiLabs\JSONRPC\RPC\ClientLayerNet;
 
 /**
  * Remote Procedure Call JSON client layer,
- * see {@see AmiLabs\JSON-RPC\RPC}.
+ * see {@see AmiLabs\JSONRPC\RPC}.
  *
  * Based on {@see https://github.com/fguillot/JsonRPC}.<br /><br />
  * Example:
  * <code>
- * use AmiLabs\JSON-RPC\RPC;
+ * use AmiLabs\JSONRPC\RPC;
  *
  * $client = RPC::getLayer('JSON', RPC::TYPE_CLIENT, $options);
  * $client->open('someURL');
@@ -33,7 +33,7 @@ use AmiLabs\JSON-RPC\RPC\ClientLayerNet;
  * );
  * </code>
  *
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
 class JSON extends ClientLayerNet implements ClientInterface
@@ -49,7 +49,7 @@ class JSON extends ClientLayerNet implements ClientInterface
      * @param  string  $method
      * @param  array   $params
      * @param  array   $options       {@see
-     *                                \AmiLabs\JSON-RPC\Request::__construct()}
+     *                                \AmiLabs\JSONRPC\Request::__construct()}
      * @param  bool    $resetOptions  Flag specifying to reset previous options
      * @param  string  $url           Cusrom URL if differs from initialized
      * @return mixed
@@ -77,7 +77,7 @@ class JSON extends ClientLayerNet implements ClientInterface
      *                                    'params' => array(,,,))
      *                                ]
      * @param  array   $options       {@see
-     *                                \AmiLabs\JSON-RPC\Request::__construct()}
+     *                                \AmiLabs\JSONRPC\Request::__construct()}
      * @param  bool    $resetOptions  Flag specifying to reset previous options
      * @param  string  $url           Cusrom URL if differs from initialized
      * @return mixed

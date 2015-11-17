@@ -1,9 +1,9 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/Core
+ * @package AmiLabs/JSONRPC/Core
  */
 
-namespace AmiLabs\JSON-RPC\Core;
+namespace AmiLabs\JSONRPC\Core;
 
 use RuntimeException;
 
@@ -12,7 +12,7 @@ use RuntimeException;
  *
  * <code>
  * use RuntimeException;
- * use AmiLabs\JSON-RPC\Core\ProcessLock;
+ * use AmiLabs\JSONRPC\Core\ProcessLock;
  *
  * try {
  *     $lock = new ProcessLock(

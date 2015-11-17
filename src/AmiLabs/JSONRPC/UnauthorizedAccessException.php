@@ -1,18 +1,18 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC
+ * @package AmiLabs/JSONRPC
  */
 
-namespace AmiLabs\JSON-RPC;
+namespace AmiLabs\JSONRPC;
 
 use Exceptioon;
 
 /**
  * Unauthorized access exceptiption.
  *
- * @package AmiLabs/JSON-RPC
+ * @package AmiLabs/JSONRPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
-class IPRestrictionException extends Exceptioon
+class UnauthorizedAccessException extends Exceptioon
 {
 }

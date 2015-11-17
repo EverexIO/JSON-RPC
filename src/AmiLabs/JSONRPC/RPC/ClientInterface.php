@@ -1,15 +1,15 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  */
 
-namespace AmiLabs\JSON-RPC\RPC;
+namespace AmiLabs\JSONRPC\RPC;
 
 /**
  * Remote Procedure Call client layer interface,
- * see {@see AmiLabs\JSON-RPC\RPC}, {@see AmiLabs\JSON-RPC\RPC\Client\JSON}.
+ * see {@see AmiLabs\JSONRPC\RPC}, {@see AmiLabs\JSONRPC\RPC\Client\JSON}.
  *
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
 interface ClientInterface

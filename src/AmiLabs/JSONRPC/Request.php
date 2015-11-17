@@ -1,14 +1,14 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC
+ * @package AmiLabs/JSONRPC
  */
 
-namespace AmiLabs\JSON-RPC;
+namespace AmiLabs\JSONRPC;
 
 /**
  * Request based on cURL library implementation.
  *
- * @package AmiLabs/JSON-RPC
+ * @package AmiLabs/JSONRPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
 class Request
@@ -30,7 +30,7 @@ class Request
         CURLOPT_CONNECTTIMEOUT => 20,
         CURLOPT_TIMEOUT        => 30,
         CURLOPT_USERAGENT      =>
-            'PHP AmiLabs Framework / AmiLabs\\JSON-RPC\\Request',
+            'PHP AmiLabs Framework / AmiLabs\\JSONRPC\\Request',
         // Class cpecific options
         'resetCookiesAtStart'  => TRUE,
         'resetCookiesOnSend'   => FALSE,

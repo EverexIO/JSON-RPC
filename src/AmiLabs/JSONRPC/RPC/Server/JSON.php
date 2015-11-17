@@ -1,17 +1,17 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  */
 
-namespace AmiLabs\JSON-RPC\RPC\Server;
+namespace AmiLabs\JSONRPC\RPC\Server;
 
 use Exception;
 use BadMethodCallException;
 use InvalidArgumentException;
-use AmiLabs\JSON-RPC\RPC\MethodExecutionException;
-use AmiLabs\JSON-RPC\Core\Logger;
-use AmiLabs\JSON-RPC\RPC\ServerLayer;
-use AmiLabs\JSON-RPC\RPC\ServerInterface;
+use AmiLabs\JSONRPC\RPC\MethodExecutionException;
+use AmiLabs\JSONRPC\Core\Logger;
+use AmiLabs\JSONRPC\RPC\ServerLayer;
+use AmiLabs\JSONRPC\RPC\ServerInterface;
 
 class InvalidJSONFormat extends Exception
 {
@@ -23,12 +23,12 @@ class InvalidJSONRPCFormat extends Exception
 
 /**
  * Remote Procedure Call JSON server layer,
- * see {@see AmiLabs\JSON-RPC\RPC}.
+ * see {@see AmiLabs\JSONRPC\RPC}.
  *
  * Based on {@see https://github.com/fguillot/JsonRPC}.<br /><br />
  * Example:
  * <code>
- * use AmiLabs\JSON-RPC\RPC;
+ * use AmiLabs\JSONRPC\RPC;
  *
  * $server = RPC::getLayer('JSON', RPC::TYPE_SERVER, $options);
  * $server->bind('command1', 'callback1');
@@ -43,12 +43,12 @@ class InvalidJSONRPCFormat extends Exception
  * Pass next options structure to get exception details in response
  * (debug purpose only):
  * <code>
- * 'AmiLabs\\JSON-RPC\\RPC\\Server\\JSON' => array(
+ * 'AmiLabs\\JSONRPC\\RPC\\Server\\JSON' => array(
  *      'returnExceptionError' => TRUE
  * )
  * </code>
  *
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  * @todo    Batch execution
  */

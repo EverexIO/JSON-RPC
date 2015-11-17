@@ -1,9 +1,9 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/Core
+ * @package AmiLabs/JSONRPC/Core
  */
 
-namespace AmiLabs\JSON-RPC\Core;
+namespace AmiLabs\JSONRPC\Core;
 
 use InvalidArgumentException;
 use RuntimeException;

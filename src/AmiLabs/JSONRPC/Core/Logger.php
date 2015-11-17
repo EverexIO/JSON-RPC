@@ -1,16 +1,16 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/Core
+ * @package AmiLabs/JSONRPC/Core
  */
 
-namespace AmiLabs\JSON-RPC\Core;
+namespace AmiLabs\JSONRPC\Core;
 
 /**
  * Logger class.
  *
  * Usage example:
  * <code>
- * $logger = new \AmiLabs\JSON-RPC\Core\Logger(
+ * $logger = new \AmiLabs\JSONRPC\Core\Logger(
  *     array(
  *         array(
  *             // Level of reporting

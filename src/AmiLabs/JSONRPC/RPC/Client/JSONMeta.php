@@ -1,9 +1,9 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  */
 
-namespace AmiLabs\JSON-RPC\RPC\Client;
+namespace AmiLabs\JSONRPC\RPC\Client;
 
 use InvalidArgumentException;
 
@@ -12,8 +12,8 @@ use InvalidArgumentException;
  *
  * Example:
  * <code>
- * use AmiLabs\JSON-RPC\RPC;
- * use AmiLabs\JSON-RPC\RPC\Client\JSONMeta;
+ * use AmiLabs\JSONRPC\RPC;
+ * use AmiLabs\JSONRPC\RPC\Client\JSONMeta;
  *
  * class MySJON extends JSONMeta
  * {
@@ -37,7 +37,7 @@ use InvalidArgumentException;
  * );
  * </code>
  *
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
 abstract class JSONMeta extends JSON

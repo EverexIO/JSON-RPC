@@ -1,19 +1,19 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  */
 
-namespace AmiLabs\JSON-RPC\RPC;
+namespace AmiLabs\JSONRPC\RPC;
 
 use RuntimeException;
-use AmiLabs\JSON-RPC\Request;
-use AmiLabs\JSON-RPC\Utility;
+use AmiLabs\JSONRPC\Request;
+use AmiLabs\JSONRPC\Utility;
 
 /**
  * Remote Procedure Call client layer
- * using \AmiLabs\JSON-RPC\Request abstract class.
+ * using \AmiLabs\JSONRPC\Request abstract class.
  *
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
 abstract class ClientLayerNet extends ClientLayer
@@ -21,7 +21,7 @@ abstract class ClientLayerNet extends ClientLayer
     /**
      * Remote service transport object
      *
-     * @var \AmiLabs\JSON-RPC\Request
+     * @var \AmiLabs\JSONRPC\Request
      */
     protected $transport;
 
@@ -45,7 +45,7 @@ abstract class ClientLayerNet extends ClientLayer
     /**
      * Returns transport object.
      *
-     * @return \AmiLabs\JSON-RPC\Request
+     * @return \AmiLabs\JSONRPC\Request
      */
     public function getTransport()
     {
@@ -57,7 +57,7 @@ abstract class ClientLayerNet extends ClientLayer
      *
      * @param  mixed   $request
      * @param  array   $options       {@see
-     *                                \AmiLabs\JSON-RPC\Request::__construct()}
+     *                                \AmiLabs\JSONRPC\Request::__construct()}
      * @param  bool    $resetOptions  Flag specifying to reset previous options
      * @param  string  $url           Cusrom URL if differs from initialized
      * @return mixed

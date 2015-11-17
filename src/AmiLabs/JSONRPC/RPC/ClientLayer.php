@@ -1,14 +1,14 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  */
 
-namespace AmiLabs\JSON-RPC\RPC;
+namespace AmiLabs\JSONRPC\RPC;
 
 /**
  * Remote Procedure Call client layer abstract class.
  *
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
 abstract class ClientLayer extends Layer

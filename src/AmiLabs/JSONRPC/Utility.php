@@ -1,14 +1,14 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC
+ * @package AmiLabs/JSONRPC
  */
 
-namespace AmiLabs\JSON-RPC;
+namespace AmiLabs\JSONRPC;
 
 /**
  * Net utilities.
  *
- * @package AmiLabs/JSON-RPC
+ * @package AmiLabs/JSONRPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
 class Utility

@@ -1,20 +1,20 @@
 <?php
 /**
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  */
 
-namespace AmiLabs\JSON-RPC\RPC;
+namespace AmiLabs\JSONRPC\RPC;
 
 use RuntimeException;
 use BadMethodCallException;
-use AmiLabs\JSON-RPC\Core\Logger;
-use AmiLabs\JSON-RPC\UnauthorizedAccessException;
-use AmiLabs\JSON-RPC\IPRestrictionException;
+use AmiLabs\JSONRPC\Core\Logger;
+use AmiLabs\JSONRPC\UnauthorizedAccessException;
+use AmiLabs\JSONRPC\IPRestrictionException;
 
 /**
  * Remote Procedure Call server layer abstract class.
  *
- * @package AmiLabs/JSON-RPC/RPC
+ * @package AmiLabs/JSONRPC/RPC
  * @author  deepeloper ({@see https://github.com/deepeloper})
  */
 abstract class ServerLayer extends Layer implements ServerInterface
