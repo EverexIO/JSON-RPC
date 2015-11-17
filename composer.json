@@ -1,0 +1,21 @@
+{
+    "name": "amilabs/JSON-RPC",
+    "type": "project",
+    "description": "",
+    "keywords": [],
+    "homepage": "http://amilabs.co",
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "AmiLabs",
+            "homepage": "http://amilabs.co"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.1",
+        "Deepelopment/Core": "dev-develop"
+    },
+    "autoload": {
+        "psr-0": {"AmiLabs\\JSON-RPC": "src/"}
+    }
+}
