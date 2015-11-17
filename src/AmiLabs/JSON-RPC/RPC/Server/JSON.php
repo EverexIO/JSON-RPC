@@ -9,7 +9,7 @@ use Exception;
 use BadMethodCallException;
 use InvalidArgumentException;
 use AmiLabs\JSON-RPC\RPC\MethodExecutionException;
-use Deepelopment\Core\Logger;
+use AmiLabs\JSON-RPC\Core\Logger;
 use AmiLabs\JSON-RPC\RPC\ServerLayer;
 use AmiLabs\JSON-RPC\RPC\ServerInterface;
 

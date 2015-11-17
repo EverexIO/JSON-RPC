@@ -8,7 +8,7 @@ namespace AmiLabs\JSON-RPC\RPC\Client;
 use BadMethodCallException;
 use InvalidArgumentException;
 use RuntimeException;
-use Deepelopment\Core\Logger;
+use AmiLabs\JSON-RPC\Core\Logger;
 use AmiLabs\JSON-RPC\Request;
 use AmiLabs\JSON-RPC\RPC\ClientInterface;
 use AmiLabs\JSON-RPC\RPC\ClientLayerNet;

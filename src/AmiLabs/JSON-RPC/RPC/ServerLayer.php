@@ -7,7 +7,7 @@ namespace AmiLabs\JSON-RPC\RPC;
 
 use RuntimeException;
 use BadMethodCallException;
-use Deepelopment\Core\Logger;
+use AmiLabs\JSON-RPC\Core\Logger;
 use AmiLabs\JSON-RPC\UnauthorizedAccessException;
 use AmiLabs\JSON-RPC\IPRestrictionException;
 

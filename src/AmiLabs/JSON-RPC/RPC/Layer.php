@@ -5,7 +5,7 @@
 
 namespace AmiLabs\JSON-RPC\RPC;
 
-use Deepelopment\Core\Logger;
+use AmiLabs\JSON-RPC\Core\Logger;
 
 /**
  * Remote Procedure Call layer abstract class,
@@ -35,11 +35,11 @@ abstract class Layer
     {
         $this->options = $options + $this->getDefaultOptions();
         $this->logger = new Logger(
-            isset($this->options['Deepelopment\\Logger'])
-                ? $this->options['Deepelopment\\Logger']
+            isset($this->options['AmiLabs\\Logger'])
+                ? $this->options['AmiLabs\\Logger']
                 : array()
         );
-        unset($this->options['Deepelopment\\Logger']);
+        unset($this->options['AmiLabs\\Logger']);
     }
 
     /**
