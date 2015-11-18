@@ -191,7 +191,7 @@ class JSON extends ServerLayer
             $this->send(
                 array(
                     'error' => array(
-                        'code'    => $exception->getCode(),
+                        'code'    => ((int)$exception->getCode() == 7 ? 100503 : $exception->getCode()),
                         'message' => $exception->getMessage()
                     )
                 )
