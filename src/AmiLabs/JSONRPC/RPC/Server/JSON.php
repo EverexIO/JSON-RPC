@@ -192,7 +192,9 @@ class JSON extends ServerLayer
                 array(
                     'error' => array(
                         'code'    => ((int)$exception->getCode() == 7 ? 100503 : $exception->getCode()),
-                        'message' => $exception->getMessage()
+                        'message' => $exception->getMessage(),
+                        'srvCode' => $exception->srvCode,
+                        'cmdCode' => $exception->cmdCode
                     )
                 )
             );
