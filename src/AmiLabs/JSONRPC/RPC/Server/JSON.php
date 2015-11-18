@@ -188,13 +188,20 @@ class JSON extends ServerLayer
                 )
             );
         } catch (\Exception $exception) {
+            $node = '';
+            if(strpos('node1.', $exception->getMessage()) !== FALSE){
+                $node = 1;
+            }elseif(strpos('node2.', $exception->getMessage()) !== FALSE){
+                $node = 2;
+            }
             $this->send(
                 array(
                     'error' => array(
                         'code'    => ((int)$exception->getCode() == 7 ? 100503 : $exception->getCode()),
                         'message' => $exception->getMessage(),
                         'srvCode' => $exception->srvCode,
-                        'cmdCode' => $exception->cmdCode
+                        'cmdCode' => $exception->cmdCode,
+                        'node'    => $node
                     )
                 )
             );
