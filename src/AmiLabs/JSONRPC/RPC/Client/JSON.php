@@ -244,6 +244,10 @@ class JSON extends ClientLayerNet implements ClientInterface
             Logger::WARNING
         );
 
+        if(isset($error['state'])){
+            $GLOBALS['JSONRPC/State'] = $error['state'];
+        }
+
         switch ($error['code']) {
             case -32601:
                 throw new BadMethodCallException(

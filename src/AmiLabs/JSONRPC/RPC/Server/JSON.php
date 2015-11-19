@@ -150,6 +150,8 @@ class JSON extends ServerLayer
             $this->options = $options + $this->options;
         }
 
+        $response = FALSE;
+
         try {
             $this->validateRequest();
 
@@ -161,45 +163,47 @@ class JSON extends ServerLayer
             );
 
         } catch (InvalidJSONFormat $exception) {
-            $this->send(
+            $response =
                 array(
                     'error' => array(
                         'code'    => -32700,
                         'message' => 'Parse error, invalid JSON format'
                     )
-                )
-            );
+                );
         } catch (InvalidJSONRPCFormat $exception) {
-            $this->send(
+            $response =
                 array(
                     'error' => array(
                         'code'    => -32600,
                         'message' => 'Invalid JSON RPC request'
                     )
-                )
-            );
+                );
         } catch (BadMethodCallException $exception) {
-            $this->send(
+            $response =
                 array(
                     'error' => array(
                         'code'    => -32601,
                         'message' => $exception->getMessage()
                     )
-                )
-            );
+                );
         } catch (\Exception $exception) {
-            $this->send(
+            $response =
                 array(
                     'error' => array(
                         'code'    => ((int)$exception->getCode() == 7 ? 100503 : $exception->getCode()),
                         'message' => $exception->getMessage()
                     )
-                )
-            );
+                );
         }
 
         if (is_array($response) && empty($response['error'])) {
             $response = array('result' => $response);
+        }
+
+        if (is_array($response) && !empty($response['error'])) {
+            if(isset($GLOBALS['JSONRPC/State'])){
+                $response['error']['state'] = $GLOBALS['JSONRPC/State'];
+            }
         }
 
         $request = $this->getRequest();
