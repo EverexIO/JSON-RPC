@@ -171,7 +171,12 @@ class JSON extends ClientLayerNet implements ClientInterface
     )
     {
         $options['method'] = Request::METHOD_OTHER;
-        $options[CURLOPT_POSTFIELDS] = json_encode($request);
+        $data = json_encode($request);
+        $options[CURLOPT_POSTFIELDS] = $data;
+        $options[CURLOPT_HTTPHEADER] = array(
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($data)
+        );
 
         $this->logger->write(
             sprintf(
